@@ -1,0 +1,35 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/circular-arrangement.js",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@stryker-mutator/core": "^2.1.0",
+    "@stryker-mutator/html-reporter": "^2.1.0",
+    "@stryker-mutator/javascript-mutator": "^2.1.0",
+    "@stryker-mutator/jest-runner": "^2.1.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "coverage": "npm test -- --coverage --coverageReporters='html'",
+    "lint": "eslint src test && echo \"$(tput setaf 2)OK$(tput sgr 0) !\" || echo \"\"",
+    "prettier": "eslint src test --fix && echo \"$(tput setaf 2)OK$(tput sgr 0) !\" || echo \"\"",
+    "stryker" : "stryker run",
+    "build" : "webpack --config .webpackrc.js",
+    "build:prod" : "npm run build -- --mode production"
+  },
+  "author": "",
+  "license": "ISC"
+}

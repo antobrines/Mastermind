@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <h1>circular-arrangement</h1>
+    <div class="panel">
+        <div class="circles">
+            <div class="disk center"></div>
+            <div class="content"></div>
+        </div>
+    </div>
+    <form action="script.js"  class="panel" onsubmit="willSubmit(this.number,this.radius, document.querySelector('.circles'))">
+        <label>
+            <div>Nombre de disques</div>
+            <div class="sub">de 1 à 9</div>
+            <input pattern="^[1-9]$" name="number" value="5"/>
+        </label>
+        <label>
+            <div>Rayon des disques</div>
+            <div class="sub">de 1 à 60 pixels</div>
+            <input pattern="^[1-9]||([1-5][0-9])||(60)$" name="radius" value="20"/>
+        </label>
+        <input type="submit" id="update" value="&#8635"/>
+    </form>
+</body>
+</html>
